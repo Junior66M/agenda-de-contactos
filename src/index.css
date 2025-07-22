@@ -9,6 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.borrar{
+  font-size: 11px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
