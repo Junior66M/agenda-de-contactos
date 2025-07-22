@@ -16,7 +16,7 @@ function ContactList({ contacts, onDelete, onEdit }: ContactListProps) {
           {contacts.map(contact => (
             <li key={contact.id} className="contact-item">
               <div>
-                <strong>{contact.name}</strong>
+                <strong>{contact.name}</strong> 
                 <strong> {contact.lastName}</strong>
                 <span> - {contact.phone}</span>
                 <span> - {contact.email}</span>

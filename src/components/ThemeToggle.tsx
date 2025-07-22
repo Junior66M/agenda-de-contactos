@@ -1,13 +1,14 @@
+import React from 'react';
+import { useTheme } from '../context/TemaContex'; 
+
 function ThemeToggle() {
-  const handleToggle = () => {
-    console.log('Cambiar tema')
-  }
+  const { theme, toggleTheme } = useTheme(); 
 
   return (
-    <button onClick={handleToggle} className="theme-toggle">
-      Tema
+    <button onClick={toggleTheme} className="theme-toggle">
+      {theme === 'light' ? '🌑 Modo Oscuro' : '☀️ Modo Claro'}
     </button>
-  )
+  );
 }
 
-export default ThemeToggle
+export default ThemeToggle;
