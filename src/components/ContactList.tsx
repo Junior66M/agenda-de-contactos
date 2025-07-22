@@ -2,7 +2,7 @@ import { Contact } from '../types/Contact.tsx'
 
 interface ContactListProps {
   contacts: Contact[]
-  onDelete: (id: string) => void
+  onDelete: (contact:Contact) => void
   onEdit: (contact: Contact) => void
 }
 
@@ -17,11 +17,14 @@ function ContactList({ contacts, onDelete, onEdit }: ContactListProps) {
             <li key={contact.id} className="contact-item">
               <div>
                 <strong>{contact.name}</strong>
+                <strong> {contact.lastName}</strong>
                 <span> - {contact.phone}</span>
+                <span> - {contact.email}</span>
+                
               </div>
               <div className="contact-actions">
                 <button onClick={() => onEdit(contact)}>Editar</button>
-                <button onClick={() => onDelete(contact.id)}>Eliminar</button>
+                <button onClick={() => onDelete(contact)}>Eliminar</button>
               </div>
             </li>
           ))}

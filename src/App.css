@@ -180,3 +180,63 @@
 .theme-toggle:hover {
   background-color: #555;
 }
+
+.confirmation-dialog-overlay {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  z-index: 1000; 
+}
+
+.confirmation-dialog {
+  background-color: var(--background-color-secondary, #edf4f5); 
+  color: var(--text-color, #333);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 1 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 380px;
+  width: 90%;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.dialog-actions {
+
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.dialog-actions button {
+  padding: 10px 22px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  color: white; 
+}
+.dialog-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.dialog-actions .confirm-button {
+  background-color: #7f8c8d; 
+}
+
+.dialog-actions .cancel-button {
+  background-color: #7f8c8d; 
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

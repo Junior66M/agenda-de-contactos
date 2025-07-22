@@ -10,7 +10,7 @@ function SearchBar({ searchTerm, onSearchChange }: SearchBarProps) {
         type="text"
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
-        placeholder="Buscar contactos..."
+        placeholder="Buscar contactos...🔎" 
         className="search-input"
       />
     </div>
